@@ -1,3 +1,82 @@
+@media (min-width: 1000px) {
+    :root {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    :root {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    :root {
+        font-size: 10px;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: grid;
+    font-size: 2rem;
+}
+
+.pfp-and-name {
+    background-image: url("./img/Maui.jpg");
+    background-size: cover;
+    color: white;
+    font-size: 3.25rem;
+}
+
+.contact-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.about-me-info { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (min-width: 1000px) {
+
+    header {
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: 3rem 1fr 3rem;
+        max-width: 80vw;
+        height: 80vh;
+        margin: 100px 0px 100px 0px;
+    }
+
+    .about-me-info {
+        grid-row: 2;
+        padding: 0px 30px;
+    }
+
+    .pfp-and-name {
+        grid-column: 1;
+        grid-row: 1/-1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .header-icon {
+        height: 75px;
+        width: auto;
+    }
+
+}
+
 img {
     height: 50px;
     width: 50px;
