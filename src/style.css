@@ -87,7 +87,6 @@ header {
 .projects-showcase {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 400px));
-    grid-template-rows: 100px repeat(auto-fill, 500px);
     column-gap: 2rem;
     row-gap: 1.5rem;
 }
@@ -99,6 +98,7 @@ header {
 }
 
 .project-card {
+    max-height: 500px;
     display: grid;
     grid-template-rows: 1fr 1fr;
     align-items: center;
@@ -115,6 +115,40 @@ header {
     object-fit: cover;
     height: 100%;
     width: 100%;
+}
+
+.project-card-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2rem 1fr;
+    row-gap: .75rem;
+    padding: .2rem .5rem;
+}
+
+.project-name {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 1.35rem;
+}
+
+.project-links {
+    display: flex;
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    gap: 1rem;
+}
+
+.project-links img {
+    width: 1.75rem;
+    height: auto;
+}
+
+.project-description {
+    grid-column: 1/-1;
+    grid-row: 2;
+    font-size: 1.05rem;
 }
 
 /* For screens over 1000px, desktop */
