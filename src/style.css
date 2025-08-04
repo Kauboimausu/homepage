@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Zain&display=swap');
+
 @media (min-width: 1000px) {
     :root {
         font-size: 20px;
@@ -16,22 +18,41 @@
     }
 }
 
+:root {
+    --cool-color: rgb(255, 128, 128);
+    font-family: Zain;
+}
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.background-decor {
+    position: absolute;
+    top: -30vh;
+    left: -150px;
+    right: 0;
+    z-index: -1;
+    min-width: 130vw;
+    min-height: 100vh;
+    transform: rotateZ(170deg);
+    
+    background-color: var(--cool-color);
+}
+
 header {
     display: grid;
-    font-size: 2rem;
+    font-size: 2.1rem;
 }
 
 .pfp-and-name {
     background-image: url("./img/Maui.jpg");
+    background-position: right;
     background-size: cover;
     color: white;
-    font-size: 3.25rem;
+    font-size: 3.5rem;
 }
 
 .contact-icons {
@@ -45,6 +66,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: white;
+    box-shadow: 3px 3px 10px rgb(0, 0, 0, .65);
 }
 
 @media (min-width: 1000px) {
@@ -70,9 +93,17 @@ header {
         align-items: flex-end;
     }
 
+    .about-me {
+        margin-top: 25px;
+    }
+
     .header-icon {
-        height: 75px;
+        height: 65px;
         width: auto;
+    }
+
+    .contact-icons {
+        margin: 0px 25px 30px 0;
     }
 
 }
