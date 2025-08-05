@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Zain&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Tinos&display=swap");
 
 /* Changing font sizes depending on screen */
 
@@ -24,7 +24,7 @@
 
 :root {
     --cool-color: rgb(255, 128, 128);
-    font-family: Zain;
+    font-family: Tinos;
 }
 
 /* Main, reusable layout */
@@ -84,11 +84,16 @@ header {
     box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.65);
 }
 
+.about-paragraph {
+    font-size: 1.5rem;
+}
+
 .projects-showcase {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 400px));
     column-gap: 2rem;
-    row-gap: 1.5rem;
+    row-gap: 2.5rem;
+    margin: 3rem 0rem;
 }
 
 .projects-showcase-title {
@@ -102,7 +107,15 @@ header {
     display: grid;
     grid-template-rows: 1fr 1fr;
     align-items: center;
-    box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.65);
+    border-radius: 2rem;
+    overflow: clip;
+    box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.7);
+    transition: all .25s ease-in;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.45);;
 }
 
 .project-image-frame {
@@ -148,7 +161,30 @@ header {
 .project-description {
     grid-column: 1/-1;
     grid-row: 2;
-    font-size: 1.05rem;
+    font-size: .95rem;
+    padding: 0 .25rem;
+}
+
+footer {
+    background-color: var(--cool-color);
+    width: 100%;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.phone-contact {
+    display: flex;
+}
+
+.email-contact {
+    display: flex;
+}
+
+.link-contacts {
+    display: flex;
 }
 
 /* For screens over 1000px, desktop */
@@ -190,6 +226,15 @@ header {
 
     .projects-showcase {
         max-width: calc(75% + 250px);
+    }
+
+    footer {
+        max-height: 20rem;
+    }
+
+    .contact-info {
+        width: 70%;
+        margin: 0 auto;
     }
 
 }
