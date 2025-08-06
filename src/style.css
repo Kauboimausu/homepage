@@ -185,7 +185,20 @@ footer {
 
 .link-contacts {
     display: flex;
+    justify-content: flex-start;
 }
+
+.contact-icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.footer-icon {
+    width: 3rem;
+    height: auto;
+}
+
+
 
 /* For screens over 1000px, desktop */
 
@@ -239,7 +252,4 @@ footer {
 
 }
 
-img {
-    height: 50px;
-    width: 50px;
-}
+
