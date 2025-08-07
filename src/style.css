@@ -49,7 +49,7 @@ main {
     left: -150px;
     right: 0;
     z-index: -1;
-    min-width: 130vw;
+    min-width: 150vw;
     min-height: 100vh;
     transform: rotateZ(170deg);
 
@@ -167,34 +167,47 @@ header {
 
 footer {
     background-color: var(--cool-color);
-    width: 100%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer section */
+
+.footer-wrap {
+    width: 80%;
+    display: flex;
 }
 
 .contact-info {
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .phone-contact {
     display: flex;
+    gap: .5rem;
 }
 
 .email-contact {
     display: flex;
+    gap: .65rem;
 }
 
 .link-contacts {
     display: flex;
     justify-content: flex-start;
+    gap: 1.35rem;
 }
 
 .contact-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 1.75rem;
+    height: auto;
 }
 
 .footer-icon {
-    width: 3rem;
+    width: 2.35rem;
     height: auto;
 }
 
@@ -241,15 +254,72 @@ footer {
         max-width: calc(75% + 250px);
     }
 
-    footer {
-        max-height: 20rem;
-    }
-
     .contact-info {
         width: 70%;
         margin: 0 auto;
+        gap: .75rem;
+    }
+
+    footer {
+        padding: 2rem 3rem;
+    }
+
+    .footer-wrap {
+        gap: 1rem;
+    }
+
+    .footer-image {
+        max-width: 500px;
+        height: auto;
     }
 
 }
+
+ @media (max-width: 999px) {
+    header {
+        margin: 3rem auto;
+        grid-template-columns: 43vw 43vw;
+        grid-template-rows: repeat(4, calc(86vw / 4));
+    }
+
+    .pfp-and-name {
+        grid-column: 1;
+        grid-row: 1/4;
+        display: flex;
+        align-items: flex-start;
+        overflow: visible;
+        z-index: 1;
+    }
+
+    .pfp-and-name > span {
+        transform: translateX(10rem) translateY(2.25rem);
+        white-space: nowrap;
+        font-size: 4rem;
+    }
+
+    .about-me-info {
+        margin: 0 2rem;
+        grid-column: 1/-1;
+        grid-row: 2/-1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr; 
+    }
+
+    .about-me {
+        grid-column: 2;
+        grid-row: 1;
+        font-size: 2.5rem;
+        color: black;
+    }
+
+    .about-paragraph {
+        grid-column: ;
+    }
+
+    .contact-icons {
+        display: none;
+    }
+ }
 
 
