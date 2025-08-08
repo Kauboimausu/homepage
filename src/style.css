@@ -217,7 +217,7 @@ footer {
 
 /* For screens over 1000px, desktop */
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
     header {
         grid-template-columns: 2fr 3fr;
         grid-template-rows: 3rem 1fr 3rem;
@@ -281,7 +281,7 @@ footer {
 
 }
 
- @media (min-width: 500px) and (max-width: 1000px) {
+ @media (min-width: 500px) and (max-width: 1200px) {
     
     .background-decor {
         top: -40vh;
