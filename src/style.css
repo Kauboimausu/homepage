@@ -2,19 +2,19 @@
 
 /* Changing font sizes depending on screen */
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
     :root {
         font-size: 20px;
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     :root {
         font-size: 16px;
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 575px) {
     :root {
         font-size: 10px;
     }
@@ -144,6 +144,7 @@ header {
     grid-column: 1;
     grid-row: 1;
     font-size: 1.35rem;
+    padding-left: .5rem;
 }
 
 .project-links {
@@ -165,6 +166,7 @@ header {
     grid-row: 2;
     font-size: .95rem;
     padding: 0 .25rem;
+    overflow-y: auto;
 }
 
 /* Footer section */
@@ -260,6 +262,10 @@ footer {
         max-height: 25rem;
     }
 
+    .project-description {
+        padding: .2rem .65rem;
+    }
+
     .contact-info {
         width: 70%;
         margin: 0 auto;
@@ -281,7 +287,7 @@ footer {
 
 }
 
- @media (min-width: 500px) and (max-width: 1200px) {
+ @media (min-width: 575px) and (max-width: 1200px) {
     
     .background-decor {
         top: -40vh;
@@ -309,14 +315,14 @@ footer {
         white-space: nowrap;
         font-size: 2.65rem;
         color: white;
-        background-color: rgb(0, 0, 0, .65);
         border-radius: 1.5rem;
         padding: .5rem;
-        transform: translate(17rem, 2rem);
+        transform: translate(clamp(13rem, 15rem, 17rem), 2rem);
     }
 
     .about-me-info {
-        padding: 6rem 2rem 2rem 2rem;
+        margin-top: 6rem;
+        padding: 2rem;
         max-width: 40rem;
         display: block;
     }
@@ -336,10 +342,13 @@ footer {
 
     .project-name {
         font-size: 2rem;
+        padding-left: 1rem;
+        text-wrap: nowrap;
     }
 
     .project-description {
         font-size: 1.5rem;
+        padding: .2rem 1.2rem;
     }
 
     footer {
@@ -384,7 +393,7 @@ footer {
 
  }
 
-@media (max-width: 500px) {
+@media (max-width: 575px) {
 
     .background-decor {
         top: -50vh;
