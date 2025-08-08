@@ -29,11 +29,14 @@
 
 /* Main, reusable layout */
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
 }
 
 main {
@@ -278,8 +281,13 @@ footer {
 
 }
 
- @media (max-width: 1000px) {
+ @media (min-width: 500px) and (max-width: 1000px) {
     
+    .background-decor {
+        top: -40vh;
+    }
+
+
     header {
         display: inline-block;
         padding: 5rem 2rem 3rem 2rem;
@@ -376,4 +384,116 @@ footer {
 
  }
 
+@media (max-width: 500px) {
+
+    .background-decor {
+        top: -50vh;
+    }
+
+    main {
+        gap: 3rem;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+    .pfp-and-name {
+        box-shadow: 3px 3px 10px rgb(0, 0, 0, .65);
+        height: 30rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .pfp-and-name, .about-me-info {
+        width: 34rem;
+    }
+
+    .about-me-info {
+        padding: 1.5rem;
+    }
+
+    .about-me {
+        font-size: 3.5rem;
+    }
+
+    .about-paragraph {
+        font-size: 2.25rem;
+    }
+
+    .header-icon {
+        width: 5.5rem;
+    }
+
+    .contact-icons {
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .projects-showcase {
+        grid-template-columns: minmax(250px, 340px);
+    }
+
+    .projects-showcase-title {
+        font-size: 3.5rem;
+    }
+
+    .project-card {
+        max-height: 50rem;
+    }
+
+    .project-name {
+        font-size: 2.75rem;
+    }
+
+    .project-card-info {
+        height: 100%;
+        padding: 1.5rem 2.5rem;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 4rem 1fr;
+    }
+
+    .project-description {
+        font-size: 1.85rem;
+    }
+
+    .project-links img {
+        width: 3.15rem;
+    }
+
+    .footer-wrap {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .contact-info {
+        padding: 2rem 3rem;
+        font-size: 2.5rem;
+        gap: 1.25rem;
+    }
+
+    .phone-contact, .email-contact {
+        gap: 1.5rem;
+    }
+
+    .contact-icon {
+        width: 3.25rem;
+        height: 3.25rem;
+    }
+
+    .link-contacts {
+        justify-content: center;
+    }
+
+    .footer-icon {
+        width: 4.5rem;
+        height: auto;
+    }
+
+}
 
