@@ -103,7 +103,6 @@ header {
 }
 
 .project-card {
-    max-height: 500px;
     display: grid;
     grid-template-rows: 1fr 1fr;
     align-items: center;
@@ -165,14 +164,14 @@ header {
     padding: 0 .25rem;
 }
 
+/* Footer section */
+
 footer {
     background-color: var(--cool-color);
     width: 100vw;
     display: flex;
     justify-content: center;
 }
-
-/* Footer section */
 
 .footer-wrap {
     width: 80%;
@@ -254,6 +253,10 @@ footer {
         max-width: calc(75% + 250px);
     }
 
+    .project-card {
+        max-height: 25rem;
+    }
+
     .contact-info {
         width: 70%;
         margin: 0 auto;
@@ -275,20 +278,17 @@ footer {
 
 }
 
- @media (max-width: 999px) {
+ @media (max-width: 1000px) {
     header {
-        margin: 3rem auto;
-        grid-template-columns: 43vw 43vw;
-        grid-template-rows: repeat(4, calc(86vw / 4));
+        align-items: center;
+        max-width: 40rem;
     }
 
     .pfp-and-name {
-        grid-column: 1;
-        grid-row: 1/4;
-        display: flex;
-        align-items: flex-start;
-        overflow: visible;
-        z-index: 1;
+        float: left;
+        height: 350px;
+        width: 350px;
+        margin-right: 3rem;
     }
 
     .pfp-and-name > span {
@@ -298,28 +298,71 @@ footer {
     }
 
     .about-me-info {
-        margin: 0 2rem;
-        grid-column: 1/-1;
-        grid-row: 2/-1;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr; 
+        padding: 2rem;
+        max-width: 40rem;
     }
 
     .about-me {
-        grid-column: 2;
-        grid-row: 1;
         font-size: 2.5rem;
         color: black;
     }
 
-    .about-paragraph {
-        grid-column: ;
+    .project-card {
+        max-height: 35rem;
     }
 
     .contact-icons {
         display: none;
     }
+
+    .project-name {
+        font-size: 2rem;
+    }
+
+    .project-description {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        font-size: 1.5rem;
+        padding: 3.5rem 2.5rem;
+    }
+
+    .phone-contact, .email-contact {
+        gap: 1rem;
+        overflow-wrap: break-word;
+    }
+
+    .contact-info {
+        max-width: 20rem;
+        gap: 1.5rem;
+    }
+
+    .footer-wrap {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .contact-icon {
+        width: 2.5rem;
+        height: auto;
+    }
+
+    .footer-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .link-contacts {
+        justify-content: center ;
+    }
+
+    .footer-image {
+        max-width: 350px;
+    }
+
  }
 
 
