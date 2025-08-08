@@ -279,8 +279,13 @@ footer {
 }
 
  @media (max-width: 1000px) {
+    
     header {
-        align-items: center;
+        display: inline-block;
+        padding: 5rem 2rem 3rem 2rem;
+    }
+
+    header, .about-me-info {
         max-width: 40rem;
     }
 
@@ -288,18 +293,24 @@ footer {
         float: left;
         height: 350px;
         width: 350px;
-        margin-right: 3rem;
+        transform: translate(-1.5rem, -1.5rem);
     }
 
     .pfp-and-name > span {
-        transform: translateX(10rem) translateY(2.25rem);
+        display: inline-block;
         white-space: nowrap;
-        font-size: 4rem;
+        font-size: 2.65rem;
+        color: white;
+        background-color: rgb(0, 0, 0, .65);
+        border-radius: 1.5rem;
+        padding: .5rem;
+        transform: translate(17rem, 2rem);
     }
 
     .about-me-info {
-        padding: 2rem;
+        padding: 6rem 2rem 2rem 2rem;
         max-width: 40rem;
+        display: block;
     }
 
     .about-me {
